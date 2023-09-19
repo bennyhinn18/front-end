@@ -1,0 +1,22 @@
+.container {
+  background-color: lightblue;
+  width: 99%;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0 auto; /* Center the box horizontally */
+  margin-bottom: 1px
+}
+.containermain {
+  background-color: rgb(196, 230, 173);
+  width: 99%;
+  padding: 10px;
+  padding-bottom: 100%;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0 auto; /* Center the box horizontally */
+}
+
+.text {
+  color: navy;
+}
