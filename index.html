@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Learn Html</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Color Change</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            transition: background-color 0.3s;
+        }
+        button {
+            font-size: 16px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1><div class="text">Your text here</div></h1>
-    </div>
-    <div class="containermain">
-        <h1><div class="text">Your text here</div></h1>
-    </div>
+    <h1>Click the Button!</h1>
+    <button id="colorButton">Change Color</button>
+
+    <script>
+        document.getElementById('colorButton').addEventListener('click', function() {
+            var randomColor = '#' + Math.floor(Math.random()*16777215).toString(16);
+            document.body.style.backgroundColor = randomColor;
+        });
+    </script>
 </body>
 </html>
