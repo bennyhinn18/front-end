@@ -1,0 +1,18 @@
+#logo{
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    display: block;
+    background-color: #fff;
+    background-image: url("https://stellamaryscoe.edu.in/img/logo.png");
+    background-size: 80%; /* Adjusted to fit the logo properly */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#clg{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #851818;
+    margin-bottom: 20px;
+}
