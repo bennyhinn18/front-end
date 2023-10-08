@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100&display=swap');
+
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+.header {
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: -70px; /* Initially hide the header by moving it above the viewport */
+    transition: top 0.3s; /* Add smooth transition effect */
+    z-index: 1000;
+    background-color: #333;
+    font-size: smaller;
+}
+
+.parallax {
+    background-image: url('https://hrcdn.net/patterns/coffee.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.centered {
+    text-align: center;
+    color: #ffffff;
+    font-size: 3em;
+}
+.centered p {
+    font-size: 0.5em;
+    font-family: 'Onest', sans-serif;
+}
+
+.crush-limits {
+    text-align: center;
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+}
+
+.crush-animation h2 {
+    display: inline-block;
+    position: relative;
+}
+
+.crush-animation h2:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: #fff;
+    transform-origin: bottom right;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.crush-animation:hover h2:before {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+}
+
+#crush-image {
+    max-width: 100%;
+    max-height: 300px;
+}
+
+.content {
+    padding: 50px;
+    text-align: center;
+    background-color: #f8f8f8;
+    margin-top: 100px;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: -70px; /* Initially hide the footer by moving it below the viewport */
+    transition: bottom 0.3s; /* Add smooth transition effect */
+}
+
+/* ... rest of your CSS ... */
+
+.crush-limits {
+    text-align: center;
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.punching-text span {
+    font-size: 2em;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.punch {
+    display: inline-block;
+    transform: translateY(0);
+    transition: transform 0.1s;
+}
+
+.punch:hover {
+    transform: translateY(-5px);
+}
+
+.scattered-text {
+    font-size: 0.5em;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.scattered-text span {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.scatter {
+    display: inline-block;
+    transform: translateY(0);
+    transition: transform 0.1s;
+}
+
+.scatter.scattered {
+    animation: scatterAnim 5s forwards;
+}
+
+@keyframes scatterAnim {
+    to {
+        transform: translateX(calc(50% - 200px)) translateY(calc(50% - 100px)) rotate(720deg);
+        opacity: 0;
+    }
+}
